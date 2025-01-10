@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Grading System</h1>
+        
+        <!-- Add Student Form -->
+        <div class="form-container">
+            <h2>Add Student</h2>
+            <form id="addStudentForm">
+                <input type="text" id="rollNo" placeholder="Enter Roll No" required><br>
+                <input type="text" id="name" placeholder="Enter Name" required><br>
+                <input type="number" id="marks" placeholder="Enter Marks" required><br>
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+
+        <!-- Display Students -->
+        <div class="display-container">
+            <h2>Student Records</h2>
+            <button id="loadStudents">Load Students</button>
+            <button id="toggleStudentList" onclick="toggleStudentList()">Close</button>
+            <div id="studentsList"></div>
+        </div>
+
+        <!-- Search Student -->
+        <div class="search-container">
+            <h2>Search Student by Roll No</h2>
+            <input type="number" id="searchRollNo" placeholder="Enter Roll No to Search">
+            <button onclick="searchStudent()">Search</button>
+            <div id="searchResult"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
